@@ -1,2 +1,2 @@
-# PRJCT-NEURON
-apl shopping
+# PREJECT-NEURON
+Simple E-Commerce Website
