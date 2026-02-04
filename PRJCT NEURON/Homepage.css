@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E5D9B6;
+}
+
+/* =====================
+   ACCESSIBILITY BASICS
+   ===================== */
+
+/* Screen reader only */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 3px solid #29134d
+}
+
+/* Fokus keyboard */
+a:focus,
+button:focus,
+input:focus {
+    outline: 3px solid #000;
+    outline-offset: 2px;
+}
+
+/* Font lebih mudah dibaca */
+body {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Header Styles */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.promotional-banner {
+    background-color: #ff5733;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Products Section Styles */
+.Products {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.product-card h3 {
+    font-size: 1.1em;
+    margin: 10px 0 6px 0;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #ff5733;
+    margin: 0 0 12px 0;
+    font-weight: bold;
+}
+
+.product-card button {
+    background: #ff5733;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.product-card button:hover {
+    background: #e14a28;
+}
+/* Navigation Styles */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    text-align: center;
+}
+
+.nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav a:hover {
+    background-color: #555;
+}
+
+/* Main Content Styles */
+.main {
+    padding: 20px;
+}
+
+/* =====================
+   SEARCH BAR
+   ===================== */
+   .search-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px 40px;
+    /* border: 3px solid red; */
+}
+
+.search-container form {
+    display: flex;
+    gap: 8px;
+    /* border: 3px solid #4c00ff; */
+}
+
+.search-container input {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    outline: none;
+    width: 220px;
+    
+}
+
+.search-container button {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ff5733;
+    color: white;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #e14a28;
+}
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* =====================
+   MOBILE (HP)
+   ===================== */
+   @media (max-width: 600px) {
+
+    .search-container {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .search-container input {
+        width: 65%;
+    }
+
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    /* Sembunyikan icon kiri atas */
+    header div {
+        display: none;
+    }
+
+    /* Search */
+    form input {
+        width: 70%;
+        padding: 8px;
+    }
+
+    /* Produk jadi 1 kolom */
+    .Products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+
+    .promotional-banner {
+        font-size: 1em;
+        padding: 12px;
+    }
+}
+/* =====================
+   TABLET
+   ===================== */
+   /* =====================
+   TABLET (iPad)
+   ===================== */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .search-container {
+        justify-content: center !important;
+        padding: 12px 20px;
+    }
+
+
+
+    .Products {
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 45%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
